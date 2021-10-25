@@ -13,8 +13,8 @@ void main(void)
     uart_init();
     
     while(1){
-        uart_putstr(str);
-        //uart_echo();
+        //uart_putstr(str);
+        uart_echo();
     }
     
     
