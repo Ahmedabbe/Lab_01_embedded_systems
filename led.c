@@ -5,6 +5,8 @@
 
 void LedBlink()
 {
-    InitBluePin(); // set pin 9 to OUTPUT
-    ToggleBit(); // blink LED blue color on and off
+    while (1)
+    {
+        ToggleBit(); // Blink blue LED color on and off
+    }
 }
