@@ -5,17 +5,22 @@
 
 void main(void)
 {
-    char *str = {"Ahmed Alhasani\n"};
+    char *buffer[MAX_BUFFER_LEN];
+    
+    // char *str = {"Ahmed Alhasani\n"};
 
-    //InitLedPin(); // set pin 9 to OUTPUT
-    //LedBlink(); // Blink blue light
-    
+    InitLedPin(); // set pin 9 to OUTPUT
+
+    //BlinkLED(); // Blink blue light
+
     uart_init();
-    
-    while(1){
+
+    while (1)
+    {
+        uart_getstr(buffer);
+        led_switch(buffer);
+
         //uart_putstr(str);
-        uart_echo();
+        //uart_echo();
     }
-    
-    
 }
